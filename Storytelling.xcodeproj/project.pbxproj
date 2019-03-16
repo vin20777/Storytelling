@@ -12,6 +12,11 @@
 		8325974F223C89C90080BD74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8325974D223C89C90080BD74 /* Main.storyboard */; };
 		83259751223C89CB0080BD74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83259750223C89CB0080BD74 /* Assets.xcassets */; };
 		83259754223C89CB0080BD74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83259752223C89CB0080BD74 /* LaunchScreen.storyboard */; };
+		8325975C223C8CCB0080BD74 /* StorySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8325975B223C8CCB0080BD74 /* StorySource.swift */; };
+		83259763223C90F40080BD74 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83259762223C90F40080BD74 /* Theme.swift */; };
+		83259766223C91A20080BD74 /* Srisakdi-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83259764223C91A10080BD74 /* Srisakdi-Bold.ttf */; };
+		83259767223C91A20080BD74 /* Srisakdi-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83259765223C91A10080BD74 /* Srisakdi-Regular.ttf */; };
+		839B761B223D66720067C9EA /* StoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839B761A223D66720067C9EA /* StoryLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		83259750223C89CB0080BD74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83259753223C89CB0080BD74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83259755223C89CB0080BD74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8325975B223C8CCB0080BD74 /* StorySource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySource.swift; sourceTree = "<group>"; };
+		83259762223C90F40080BD74 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		83259764223C91A10080BD74 /* Srisakdi-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Srisakdi-Bold.ttf"; sourceTree = "<group>"; };
+		83259765223C91A10080BD74 /* Srisakdi-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Srisakdi-Regular.ttf"; sourceTree = "<group>"; };
+		839B761A223D66720067C9EA /* StoryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,51 @@
 		83259748223C89C90080BD74 /* Storytelling */ = {
 			isa = PBXGroup;
 			children = (
-				83259749223C89C90080BD74 /* AppDelegate.swift */,
-				8325974B223C89C90080BD74 /* ViewController.swift */,
-				8325974D223C89C90080BD74 /* Main.storyboard */,
-				83259750223C89CB0080BD74 /* Assets.xcassets */,
-				83259752223C89CB0080BD74 /* LaunchScreen.storyboard */,
-				83259755223C89CB0080BD74 /* Info.plist */,
+				8325975D223C8CD50080BD74 /* Model */,
+				8325975F223C8CF20080BD74 /* View */,
+				83259760223C8D3C0080BD74 /* Controller */,
+				83259761223C90CA0080BD74 /* Resource */,
 			);
 			path = Storytelling;
+			sourceTree = "<group>";
+		};
+		8325975D223C8CD50080BD74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8325975B223C8CCB0080BD74 /* StorySource.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8325975F223C8CF20080BD74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83259752223C89CB0080BD74 /* LaunchScreen.storyboard */,
+				8325974D223C89C90080BD74 /* Main.storyboard */,
+				839B761A223D66720067C9EA /* StoryLabel.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		83259760223C8D3C0080BD74 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83259749223C89C90080BD74 /* AppDelegate.swift */,
+				8325974B223C89C90080BD74 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		83259761223C90CA0080BD74 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				83259762223C90F40080BD74 /* Theme.swift */,
+				83259764223C91A10080BD74 /* Srisakdi-Bold.ttf */,
+				83259765223C91A10080BD74 /* Srisakdi-Regular.ttf */,
+				83259750223C89CB0080BD74 /* Assets.xcassets */,
+				83259755223C89CB0080BD74 /* Info.plist */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +169,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83259767223C91A20080BD74 /* Srisakdi-Regular.ttf in Resources */,
 				83259754223C89CB0080BD74 /* LaunchScreen.storyboard in Resources */,
+				83259766223C91A20080BD74 /* Srisakdi-Bold.ttf in Resources */,
 				83259751223C89CB0080BD74 /* Assets.xcassets in Resources */,
 				8325974F223C89C90080BD74 /* Main.storyboard in Resources */,
 			);
@@ -136,6 +185,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8325974C223C89C90080BD74 /* ViewController.swift in Sources */,
+				83259763223C90F40080BD74 /* Theme.swift in Sources */,
+				839B761B223D66720067C9EA /* StoryLabel.swift in Sources */,
+				8325975C223C8CCB0080BD74 /* StorySource.swift in Sources */,
 				8325974A223C89C90080BD74 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8T79SY5AA9;
 				INFOPLIST_FILE = Storytelling/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +345,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vtstudio.ios.Storytelling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -303,6 +356,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8T79SY5AA9;
 				INFOPLIST_FILE = Storytelling/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vtstudio.ios.Storytelling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

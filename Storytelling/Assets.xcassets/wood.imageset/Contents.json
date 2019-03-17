@@ -1,0 +1,35 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 716,
+          "height" : 519
+        },
+        "cap-insets" : {
+          "bottom" : 0,
+          "top" : 115,
+          "right" : 10,
+          "left" : 0
+        }
+      },
+      "idiom" : "universal",
+      "filename" : "wood@2X.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

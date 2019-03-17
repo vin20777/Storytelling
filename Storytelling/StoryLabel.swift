@@ -9,7 +9,7 @@
 import UIKit
 
 protocol EndPageDelegate: AnyObject {
-    func endAnimation()
+    func endAnimation(nextTag: Int)
 }
 
 class StoryLabel: UILabel {
@@ -23,7 +23,7 @@ class StoryLabel: UILabel {
     private var endValue: Double = 0.0
     private var animationStartDate: Date!
     private var startString = ""
-    private var paragraphCounter = 0
+    private var paragraphCounter: Int = 0
     private var storyString: String?
     
     private var displayLink: CADisplayLink!
@@ -40,9 +40,9 @@ class StoryLabel: UILabel {
         paragraphCounter = (paragraphCounter + 1) % numberOfParagraphs
         startString = ""
         startValue = 0.0
-        endValue = Double(nowParagraph.count)
+        endValue = Double(nowParagraph.paragraph.count)
         animationStartDate = Date()
-        storyString = nowParagraph
+        storyString = nowParagraph.paragraph
         
         displayLink = CADisplayLink(target: self, selector: #selector(self.handleUpdate))
         displayLink.add(to: .main, forMode: .default)
@@ -60,7 +60,7 @@ class StoryLabel: UILabel {
         
         if nowShowing >= storyString!.count {
             displayLink.invalidate()
-            delegate?.endAnimation()
+            delegate?.endAnimation(nextTag: paragraphCounter)
         }
     }
     

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var continueImageView: ContinueImageView!
     @IBOutlet weak var belowView: UIView!
     
+    private var nextPicTag: Int = 0
     private var tapGesture: UITapGestureRecognizer!
     
     // MARK: Life Cycle
@@ -55,12 +56,22 @@ class ViewController: UIViewController {
             self.storyLabel.alpha = 1.0
             self.startPlaying()
         }
+        
+        UIView.animate(withDuration: 2.0, animations: {
+            self.drawingImageView.alpha = 0.0
+        }) { _ in
+            self.drawingImageView.image = StorySource.hareAndTheTortoise[self.nextPicTag].image
+            UIView.animate(withDuration: 2.0, animations: {
+                self.drawingImageView.alpha = 1.0
+            })
+        }
     }
 }
 
 // MARK: - EndPageDelegate
 extension ViewController: EndPageDelegate {
-    func endAnimation() {
+    func endAnimation(nextTag: Int) {
         self.addTapGestureForNext()
+        self.nextPicTag = nextTag
     }
 }

@@ -7,7 +7,6 @@
 ### Can be use in ***game apps, education apps***, and etc.
 
 ## Reference Source
-------
 Youtube Tutorial: <a href="https://www.youtube.com/watch?v=b3kZH1vfG2U">Lets Build That App</a><br>
 Story Source: <a href="http://read.gov/aesop/025.html">Æsop for Children</a><br>
 Pictures Source: <a href="https://www.storytimemagazine.com/news/about-stories/growth-mindset-and-reading/">Storytime, </a>
@@ -15,8 +14,7 @@ Pictures Source: <a href="https://www.storytimemagazine.com/news/about-stories/g
 
 `The race is not always to the swift.(but to Swift 4!?)`
 
-A Glance of Code
-------
+## A Glance of Code
 ```swift
 @objc func handleUpdate() {
   let now = Date()
@@ -38,7 +36,6 @@ A Glance of Code
 length should be shown at that moment. Therefore, the paragraph works like animation.**
 
 ## Techniques in Demo App
-------
 - CADisplayLink
 - MVC Structure
 - Delegation Pattern

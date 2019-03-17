@@ -8,5 +8,5 @@
 
 import Foundation
 class Theme {
-    static let mainFontName = "Srisakdi-Regular"
+    static let mainFontName = "Margarine-Regular"
 }

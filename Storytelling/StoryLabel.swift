@@ -16,12 +16,13 @@ class StoryLabel: UILabel {
     
     weak var delegate: EndPageDelegate?
     
-    private var startString = ""
+    // How long will it take to finish a paragraph?
+    private let speed: Double = 7.0
+
     private var startValue: Double = 0.0
     private var endValue: Double = 0.0
-    private let duration: Double = 7.0
     private var animationStartDate: Date!
-    
+    private var startString = ""
     private var paragraphCounter = 0
     private var storyString: String?
     
@@ -50,7 +51,7 @@ class StoryLabel: UILabel {
     @objc func handleUpdate() {
         let now = Date()
         let elapsedTime = now.timeIntervalSince(animationStartDate)
-        let percentage = elapsedTime/duration
+        let percentage = elapsedTime/speed
         let nowShowing = Int(percentage * (endValue - startValue))
         
         let index = storyString!.index(storyString!.startIndex, offsetBy: nowShowing)

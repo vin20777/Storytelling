@@ -12,17 +12,19 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var drawingImageView: UIImageView!
     @IBOutlet weak var storyLabel: StoryLabel!
-    @IBOutlet weak var continueImageView: UIImageView!
+    @IBOutlet weak var continueImageView: ContinueImageView!
     @IBOutlet weak var belowView: UIView!
     
     private var tapGesture: UITapGestureRecognizer!
     
+    // MARK: Life Cycle
     override func viewDidLoad() {
+        super.viewDidLoad()
         continueImageView.isHidden = true
         storyLabel.delegate = self
-        super.viewDidLoad()
     }
     
+    // MARK: Action
     @IBAction private func startReading(_ sender: UIButton) {
         UIView.animate(withDuration: 1.0, animations: {
             sender.alpha = 0.0
@@ -32,31 +34,20 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK: Private
     private func startPlaying() {
         storyLabel.paragraphGenerator()
     }
     
     private func addTapGestureForNext() {
-        hintAnimate()
+        continueImageView.startJumping()
         tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
         belowView.addGestureRecognizer(tapGesture)
     }
     
-    private func hintAnimate() {
-        self.continueImageView.isHidden = false
-        UIView.animate(withDuration: 0.5, animations: {
-            self.continueImageView.frame.origin.y -= 30.0
-        }) { _ in
-            UIView.animateKeyframes(withDuration: 1.0, delay: 0.25, options: [.autoreverse, .repeat], animations: {
-                self.continueImageView.frame.origin.y += 30.0
-            })
-        }
-    }
-    
     @objc private func handleTap(sender: UITapGestureRecognizer) {
         belowView.removeGestureRecognizer(tapGesture)
-        continueImageView.isHidden = true
-        continueImageView.layer.removeAllAnimations()
+        continueImageView.stopJumping()
         UIView.animate(withDuration: 0.3, animations: {
             self.storyLabel.alpha = 0.0
         }) { _ in
@@ -67,6 +58,7 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - EndPageDelegate
 extension ViewController: EndPageDelegate {
     func endAnimation() {
         self.addTapGestureForNext()

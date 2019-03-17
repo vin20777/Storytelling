@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8310EF63223DECB200F569C6 /* Margarine-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8310EF62223DECB200F569C6 /* Margarine-Regular.ttf */; };
 		8325974A223C89C90080BD74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83259749223C89C90080BD74 /* AppDelegate.swift */; };
 		8325974C223C89C90080BD74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8325974B223C89C90080BD74 /* ViewController.swift */; };
 		8325974F223C89C90080BD74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8325974D223C89C90080BD74 /* Main.storyboard */; };
@@ -15,11 +16,12 @@
 		8325975C223C8CCB0080BD74 /* StorySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8325975B223C8CCB0080BD74 /* StorySource.swift */; };
 		83259763223C90F40080BD74 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83259762223C90F40080BD74 /* Theme.swift */; };
 		83259766223C91A20080BD74 /* Srisakdi-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83259764223C91A10080BD74 /* Srisakdi-Bold.ttf */; };
-		83259767223C91A20080BD74 /* Srisakdi-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83259765223C91A10080BD74 /* Srisakdi-Regular.ttf */; };
 		839B761B223D66720067C9EA /* StoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839B761A223D66720067C9EA /* StoryLabel.swift */; };
+		839B761D223DE9820067C9EA /* ContinueImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839B761C223DE9820067C9EA /* ContinueImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8310EF62223DECB200F569C6 /* Margarine-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Margarine-Regular.ttf"; sourceTree = "<group>"; };
 		83259746223C89C90080BD74 /* Storytelling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storytelling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83259749223C89C90080BD74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8325974B223C89C90080BD74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,8 +32,8 @@
 		8325975B223C8CCB0080BD74 /* StorySource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySource.swift; sourceTree = "<group>"; };
 		83259762223C90F40080BD74 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		83259764223C91A10080BD74 /* Srisakdi-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Srisakdi-Bold.ttf"; sourceTree = "<group>"; };
-		83259765223C91A10080BD74 /* Srisakdi-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Srisakdi-Regular.ttf"; sourceTree = "<group>"; };
 		839B761A223D66720067C9EA /* StoryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryLabel.swift; sourceTree = "<group>"; };
+		839B761C223DE9820067C9EA /* ContinueImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				83259752223C89CB0080BD74 /* LaunchScreen.storyboard */,
 				8325974D223C89C90080BD74 /* Main.storyboard */,
 				839B761A223D66720067C9EA /* StoryLabel.swift */,
+				839B761C223DE9820067C9EA /* ContinueImageView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -104,7 +107,7 @@
 			children = (
 				83259762223C90F40080BD74 /* Theme.swift */,
 				83259764223C91A10080BD74 /* Srisakdi-Bold.ttf */,
-				83259765223C91A10080BD74 /* Srisakdi-Regular.ttf */,
+				8310EF62223DECB200F569C6 /* Margarine-Regular.ttf */,
 				83259750223C89CB0080BD74 /* Assets.xcassets */,
 				83259755223C89CB0080BD74 /* Info.plist */,
 			);
@@ -169,8 +172,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83259767223C91A20080BD74 /* Srisakdi-Regular.ttf in Resources */,
 				83259754223C89CB0080BD74 /* LaunchScreen.storyboard in Resources */,
+				8310EF63223DECB200F569C6 /* Margarine-Regular.ttf in Resources */,
 				83259766223C91A20080BD74 /* Srisakdi-Bold.ttf in Resources */,
 				83259751223C89CB0080BD74 /* Assets.xcassets in Resources */,
 				8325974F223C89C90080BD74 /* Main.storyboard in Resources */,
@@ -187,6 +190,7 @@
 				8325974C223C89C90080BD74 /* ViewController.swift in Sources */,
 				83259763223C90F40080BD74 /* Theme.swift in Sources */,
 				839B761B223D66720067C9EA /* StoryLabel.swift in Sources */,
+				839B761D223DE9820067C9EA /* ContinueImageView.swift in Sources */,
 				8325975C223C8CCB0080BD74 /* StorySource.swift in Sources */,
 				8325974A223C89C90080BD74 /* AppDelegate.swift in Sources */,
 			);

@@ -10,8 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Srisakdi-Bold.ttf">
-            <string>Srisakdi-Bold</string>
+        <array key="Margarine-Regular.ttf">
+            <string>Margarine-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -24,20 +24,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qnf-OD-Tj6">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="421"/>
+                                <rect key="frame" x="0.0" y="20" width="1024" height="401"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uu4-uq-tbC">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="421"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="401"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="uu4-uq-tbC" firstAttribute="top" secondItem="Qnf-OD-Tj6" secondAttribute="top" id="HqQ-Tl-pxU"/>
                                     <constraint firstAttribute="bottom" secondItem="uu4-uq-tbC" secondAttribute="bottom" id="VZU-Iv-dSr"/>
                                     <constraint firstAttribute="trailing" secondItem="uu4-uq-tbC" secondAttribute="trailing" id="bGN-T2-yuE"/>
-                                    <constraint firstItem="uu4-uq-tbC" firstAttribute="top" secondItem="Qnf-OD-Tj6" secondAttribute="top" id="hyJ-oi-GJW"/>
                                     <constraint firstItem="uu4-uq-tbC" firstAttribute="leading" secondItem="Qnf-OD-Tj6" secondAttribute="leading" id="kEy-M3-Jqv"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaves" translatesAutoresizingMaskIntoConstraints="NO" id="LKJ-O9-oaR">
+                                <rect key="frame" x="0.0" y="421" width="1024" height="347"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlN-lC-38Z">
                                 <rect key="frame" x="20" y="441" width="984" height="307"/>
                                 <subviews>
@@ -47,18 +50,17 @@
                                         <color key="textColor" red="0.2784313725" green="0.25098039220000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LWj-x3-UFh">
-                                        <rect key="frame" x="931" y="254" width="45" height="45"/>
-                                        <color key="backgroundColor" red="1" green="0.084040851149999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tap" translatesAutoresizingMaskIntoConstraints="NO" id="LWj-x3-UFh" customClass="ContinueImageView" customModule="Storytelling" customModuleProvider="target">
+                                        <rect key="frame" x="916" y="239" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="LWj-x3-UFh" secondAttribute="height" multiplier="1:1" id="m6N-rm-9vb"/>
-                                            <constraint firstAttribute="width" constant="45" id="v9w-xT-rFc"/>
+                                            <constraint firstAttribute="width" constant="60" id="v9w-xT-rFc"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8s-oy-2TQ">
                                         <rect key="frame" x="0.0" y="0.0" width="984" height="307"/>
-                                        <fontDescription key="fontDescription" name="Srisakdi-Bold" family="Srisakdi" pointSize="40"/>
-                                        <state key="normal" title="PRESS TO START">
+                                        <fontDescription key="fontDescription" name="Margarine-Regular" family="Margarine" pointSize="40"/>
+                                        <state key="normal" title="TOUCH TO START">
                                             <color key="titleColor" red="0.2784313725" green="0.25098039220000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
@@ -66,7 +68,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="j8s-oy-2TQ" firstAttribute="top" secondItem="NlN-lC-38Z" secondAttribute="top" id="6Mo-8N-byo"/>
                                     <constraint firstAttribute="bottom" secondItem="LWj-x3-UFh" secondAttribute="bottom" constant="8" id="7Ce-L0-CUL"/>
@@ -83,12 +84,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="LKJ-O9-oaR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5DN-kx-fzc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NlN-lC-38Z" secondAttribute="bottom" constant="20" id="6j8-lR-lpG"/>
                             <constraint firstItem="NlN-lC-38Z" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="Ctd-AI-k1R"/>
                             <constraint firstItem="NlN-lC-38Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GYu-4E-VgT"/>
                             <constraint firstItem="Qnf-OD-Tj6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="T7h-9H-Pat"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NlN-lC-38Z" secondAttribute="trailing" constant="20" id="XP2-zc-VIy"/>
-                            <constraint firstItem="NlN-lC-38Z" firstAttribute="top" secondItem="Qnf-OD-Tj6" secondAttribute="bottom" id="d2u-W5-NEu"/>
+                            <constraint firstItem="NlN-lC-38Z" firstAttribute="top" secondItem="Qnf-OD-Tj6" secondAttribute="bottom" constant="20" id="d2u-W5-NEu"/>
+                            <constraint firstItem="LKJ-O9-oaR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="g94-B7-DBi"/>
+                            <constraint firstItem="LKJ-O9-oaR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gcd-VE-MO5"/>
+                            <constraint firstItem="LKJ-O9-oaR" firstAttribute="top" secondItem="Qnf-OD-Tj6" secondAttribute="bottom" id="ipb-2E-PUO"/>
                             <constraint firstItem="Qnf-OD-Tj6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kjT-cD-aoN"/>
                             <constraint firstItem="Qnf-OD-Tj6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xZ7-eh-gGf"/>
                         </constraints>
@@ -106,4 +111,8 @@
             <point key="canvasLocation" x="127.73437499999999" y="113.28125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="leaves" width="133.33332824707031" height="133.33332824707031"/>
+        <image name="tap" width="400.69564819335938" height="400.69564819335938"/>
+    </resources>
 </document>
